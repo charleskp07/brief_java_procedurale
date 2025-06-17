@@ -56,8 +56,8 @@ public class Main {
                     case 1 :
                         System.out.println("*****FACTURE DE PHARMACIE******");
                         System.out.println("\t"+ "Produits : " + Nom_Du_Produit);
-                        System.out.println("\t"+ "Prix unitaire : " + montant );
-                        System.out.println("\t"+ "Quantité : " + quantite +"FCFA" );
+                        System.out.println("\t"+ "Prix unitaire : " + montant + "FCFA" );
+                        System.out.println("\t"+ "Quantité : " + quantite );
                         System.out.println("\t"+ "Montant brut: " + prix_total + " FCFA");
                         System.out.println("\t"+ "taux de la TVA: " + TVA + " %");
                         System.out.println("\t"+ "taux secondaire: 0 %");
