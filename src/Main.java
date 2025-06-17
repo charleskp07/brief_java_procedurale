@@ -34,11 +34,6 @@ public class Main {
         prix_taux_TVA= ((prix_total*TVA)/100);
 
 
-
-
-
-
-
         do {
             System.out.print("Souhaitez-vous ajouter un autre taux ? \n Si oui entrer 1 \n Si non entrer 0 \n Entrer votre choix :");
             choix= sc.nextInt();
@@ -109,25 +104,8 @@ public class Main {
                         break;
                 }
 
-
-
                 break;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     }
 
