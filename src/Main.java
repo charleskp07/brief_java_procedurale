@@ -26,7 +26,7 @@ public class Main {
         System.out.print("Entrer la quantité du produit : ");
         quantite= sc.nextInt();
 
-        System.out.print("Entrer le taux de la TVA en %: ");
+        System.out.print("Entrer le taux de la TVA en % : ");
         TVA = sc.nextDouble();
 
         prix_total= montant*quantite;
@@ -34,13 +34,17 @@ public class Main {
         prix_taux_TVA= ((prix_total*TVA)/100);
 
 
+        //Au cas vous souhaiterez ajouter d'autres taux ou taxes
         do {
-            System.out.print("Souhaitez-vous ajouter un autre taux ? \n Si oui entrer 1 \n Si non entrer 0 \n Entrer votre choix :");
+            System.out.print(" \n Souhaitez-vous ajouter un autre taux ou taxes ? \n Si oui entrer 1 \n Si non entrer 0 \n Entrer votre choix : ");
             choix= sc.nextInt();
         } while (choix!=0 && choix!=1);
 
         switch (choix) {
             case (0):
+
+                //Confirmation de vente
+
                 do {
                     System.out.println("Appuyer 1 confirmer la vente ou O pour Annuler");
                     choix = sc.nextInt();
@@ -53,10 +57,12 @@ public class Main {
 
                         break;
 
+                        //FACTURE
+
                     case 1 :
                         System.out.println("*****FACTURE DE PHARMACIE******");
                         System.out.println("\t"+ "Produits : " + Nom_Du_Produit);
-                        System.out.println("\t"+ "Prix unitaire : " + montant + "FCFA" );
+                        System.out.println("\t"+ "Prix unitaire : " + montant + " FCFA" );
                         System.out.println("\t"+ "Quantité : " + quantite );
                         System.out.println("\t"+ "Montant brut: " + prix_total + " FCFA");
                         System.out.println("\t"+ "taux de la TVA: " + TVA + " %");
@@ -73,11 +79,12 @@ public class Main {
 
 
             case (1):
-                System.out.print(" Entrer l'autre taux souhaiter en %: ");
+                System.out.print("\n Entrer l'autre taux souhaiter en %: ");
                 TVA_2= sc.nextDouble();
 
                 prix_taux_TVA2= ((prix_total*TVA_2)/100);
 
+                //Confirmation de vente
                 do {
                     System.out.println(" Appuyer 1 confirmer la vente ou O pour Annuler");
                     choix = sc.nextInt();
@@ -90,14 +97,18 @@ public class Main {
                         break;
 
                     case 1 :
-                        System.out.println("*****FACTURE DE PHARMACIE******");
+
+
+                        // FACTURE
+
+                        System.out.println("\n \n  *****FACTURE DE PHARMACIE****** \n");
                         System.out.println("\t"+ "Produits : " + Nom_Du_Produit);
-                        System.out.println("\t"+ "Prix unitaire : " + montant + "FCFA");
+                        System.out.println("\t"+ "Prix unitaire : " + montant + " FCFA");
                         System.out.println("\t"+ "Quantité : " + quantite );
                         System.out.println("\t"+ "Montant brut: " + prix_total + " FCFA");
                         System.out.println("\t"+ "Taux de la TVA: " + TVA + " %");
                         System.out.println("\t"+ "Taux secondaire: " + TVA_2 + " %");
-                        System.out.println("\t"+ "Le montant de la TVA: " + prix_taux_TVA + " FCFA ");
+                        System.out.println("\t"+ "Le montant de la TVA: " + prix_taux_TVA + " FCFA");
                         System.out.println("\t"+ "Le montant taux secondaire : " + prix_taux_TVA2 + " FCFA  \n");
                         System.out.println("Montant total TTC : " + (prix_total+prix_taux_TVA+prix_taux_TVA2) + " FCFA");
 
